@@ -1,18 +1,6 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  SimpleGrid,
-  Flex,
-  theme,
-} from '@chakra-ui/react';
+import { ChakraProvider, Box, Grid, Flex, theme } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
 import Details from './pages/details';
 import Cart from './pages/cart';
 
@@ -23,7 +11,12 @@ function App() {
         <Grid p={4}>
           <ColorModeSwitcher justifySelf="flex-end" />
         </Grid>
-        <Flex w='full' py={20} px={20}>
+        <Flex
+          w="full"
+          py={20}
+          px={20}
+          direction={['column-reverse', 'row', 'row']}
+        >
           <Details />
           <Cart />
         </Flex>

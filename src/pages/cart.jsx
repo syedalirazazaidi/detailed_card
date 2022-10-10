@@ -13,43 +13,56 @@ import {
 import { Container } from '@chakra-ui/react';
 const Cart = () => {
   return (
-    <Container w="640px" bg="#F7FAFC" py="40px">
-      <Heading>Your cart</Heading>
-      <Text>If price is too hard on your eyes, try changing the theme.</Text>
-      <Flex justifyContent="space-between" px="20px">
+    <Container w="640px" bg="#F7FAFC" h='550px' >
+      <Box textAlign="left" w="560px" px="40px">
+        <Heading fontSize="48px" fontWeight="700">
+          Your cart
+        </Heading>
+        <Text fontSize="16px" py="12px">
+          If price is too hard on your eyes, try changing the theme.
+        </Text>
+      </Box>
+
+      <Flex justifyContent="space-between" px="40px" w="560px">
         <HStack>
           <Image
             boxSize="100px"
             objectFit="cover"
+            w="96px"
+            h="96px"
             src="https://bit.ly/dan-abramov"
             alt="Dan Abramov"
           />
-          <VStack>
-            <Text>Penny board</Text>
+          <Box textAlign="left" px="15px">
+            <Text fontSize="24px" fontWeight="700" color="#1A202C">
+              Penny board
+            </Text>
             <Text>PNYCOMP27541</Text>
-          </VStack>
+          </Box>
         </HStack>
         <Box>
-          <Text>$119.00</Text>
+          <Text color='#1A202C' fontSize='16px' fontWeight='700'>$119.00</Text>
         </Box>
       </Flex>
-      <Flex justifyContent="space-between">
-        <Text>Subtotal</Text>
-        <Text>$119.00</Text>
+      <Box px='40px' marginRight='40px' w='560px' h='148px' >
+      <Flex justifyContent="space-between" py='10px '>
+        <Text   color='#4A5568' fontWeight='400' fontSize='16px'>Subtotal</Text>
+        <Text color='#1A202C' fontSize='16px' fontWeight='700'>$119.00</Text>
       </Flex>
-      <Flex justifyContent="space-between">
-        <Text>Shipping</Text>
-        <Text>$19.99</Text>
+      <Flex justifyContent="space-between" my='16px'>
+        <Text  color='#4A5568' fontWeight='400' fontSize='16px'>Shipping</Text>
+        <Text color='#1A202C' fontSize='16px' fontWeight='700'>$19.99</Text>
       </Flex>
-      <Flex justifyContent="space-between">
-        <Text>Taxes (estimated)</Text>
-        <Text>$23.80</Text>
+      <Flex justifyContent="space-between" my='16px'>
+        <Text  color='#4A5568' fontWeight='400' fontSize='16px'>Taxes (estimated)</Text>
+        <Text color='#1A202C' fontSize='16px' fontWeight='700'>$23.80</Text>
       </Flex>
-      <Divider orientation="horizontal" />
-      <Flex justifyContent="space-between">
-        <Text>Total</Text>
-        <Text>$162.79</Text>
+      <Divider orientation="horizontal"  />
+      <Flex justifyContent="space-between" marginTop='16px'>
+        <Text  color='#4A5568' fontWeight='400' fontSize='16px'>Total</Text>
+        <Text color='#1A202C' fontSize='16px' fontWeight='700'>$162.79</Text>
       </Flex>
+      </Box>
     </Container>
   );
 };
