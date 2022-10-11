@@ -13,9 +13,11 @@ function App() {
         </Grid>
         <Flex
           w="full"
-          py={20}
+          py={[10,10,10]}
+         
           px={20}
-          direction={['column-reverse', 'row', 'row']}
+          
+          direction={{base:'column-reverse',md:'row'}}
         >
           <Details />
           <Cart />
